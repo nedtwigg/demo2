@@ -10,17 +10,6 @@ error = 0;
 TMATSInstallmsg = 'Install T-MATS matlab toolbox? Note: Installation will add MATLAB paths and generate MEX files.';
 POp = filesep;
 
-switch questdlg(TMATSInstallmsg, 'T-MATS Library','Temporary Install', 'Install', 'Cancel', 'Cancel');
-    case 'Temporary Install'
-        InstallType = 'Install';
-        PermInstall = 0;
-    case 'Install'
-        InstallType = 'Install';
-        PermInstall = 1;
-    case 'Cancel'
-        InstallType = 'Cancel';
-        PermInstall = 0;
-end
 % check if T-MATS_Library is in the path
 switch InstallType
     case 'Install',
